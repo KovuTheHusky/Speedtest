@@ -1,0 +1,9 @@
+Options -MultiViews
+
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^daily/?$ daily.php
+RewriteRule ^daily/([0-9]+)/([0-9]+)/([0-9]+)/?$ daily.php?y=$1&m=$2&d=$3
+RewriteRule ^hourly/?$ hourly.php
+RewriteRule ^hourly/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/?$ hourly.php?y=$1&m=$2&d=$3&h=$4
